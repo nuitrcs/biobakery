@@ -1,2 +1,4 @@
 # biobakery
-Singularity build file for biobakery container
+
+This repository contains a Singularity build file that builds a singularity
+image for [bioBakery](https://bitbucket.org/biobakery/biobakery/wiki/Home).
