@@ -29,8 +29,13 @@ From: biobakery/biobakery
 	curl https://bitbucket.org/biobakery/metaphlan2/get/default.zip --output metaphlan2.zip
 	unzip metaphlan2.zip
 	cd biobakery-metaphlan2-*
-	echo 'export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin:$(pwd):$(pwd)/utils' >> $SINGULARITY_ENVIRONMENT
 	chmod 755 /home/linuxbrew
+
+	cd /opt
+	wget http://github.com/bbuchfink/diamond/releases/download/v0.9.22/diamond-linux64.tar.gz
+	tar xzf diamond-linux64.tar.gz
+
+	echo 'export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin:$(pwd):$(pwd)/utils:/opt' >> $SINGULARITY_ENVIRONMENT
 
 %test
 
