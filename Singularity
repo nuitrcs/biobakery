@@ -17,7 +17,7 @@ From: biobakery/biobakery
 
 	# install USEARCH. See https://github.com/CHPC-UofU/Singularity-bioBakery/blob/master/Singularity.
 	# TODO: change license
-	USEARCH_URL="https://drive5.com/cgi-bin/upload3.py?license=2018080115480830195"
+	USEARCH_URL="https://drive5.com/cgi-bin/upload3.py?license=2018091412560519949"
 	wget -O /usr/local/bin/usearch $USEARCH_URL
 	chmod 111 /usr/local/bin/usearch
 
@@ -29,7 +29,7 @@ From: biobakery/biobakery
 	curl https://bitbucket.org/biobakery/metaphlan2/get/default.zip --output metaphlan2.zip
 	unzip metaphlan2.zip
 	cd biobakery-metaphlan2-*
-	echo 'export PATH='$PATH:/home/linuxbrew/.linuxbrew/bin:$(pwd):$(pwd)/utils >> $SINGULARITY_ENVIRONMENT
+	echo 'export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin:$(pwd):$(pwd)/utils' >> $SINGULARITY_ENVIRONMENT
 	chmod 755 /home/linuxbrew
 
 %test
