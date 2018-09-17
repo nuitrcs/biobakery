@@ -35,11 +35,11 @@ From: biobakery/biobakery
 	wget http://github.com/bbuchfink/diamond/releases/download/v0.9.22/diamond-linux64.tar.gz
 	tar xzf diamond-linux64.tar.gz
 
-	echo 'export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin:$(pwd):$(pwd)/utils:/opt' >> $SINGULARITY_ENVIRONMENT
+	echo 'export PATH=/opt:$PATH:/home/linuxbrew/.linuxbrew/bin:$(pwd):$(pwd)/utils' >> $SINGULARITY_ENVIRONMENT
 
 %test
 
-	export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/linuxbrew/.linuxbrew/bin:/opt/biobakery-metaphlan2-*:/opt/biobakery-metaphlan2-*/utils
+	export PATH=/opt:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/linuxbrew/.linuxbrew/bin:/opt/biobakery-metaphlan2-*:/opt/biobakery-metaphlan2-*/utils
 
 	mkdir ~/test_output
 	
