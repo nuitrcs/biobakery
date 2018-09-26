@@ -24,7 +24,7 @@ From: biobakery/biobakery
 	# install missing biobakery tools not installed in the biobakery/biobakery Docker image
 	# Note: `brew install metaphlan2` fails on biom package install (gcc compiler issue; not remedied by installing gcc-5)
 	pip install numpy
-	pip install pandas biopython scipy matplotlib h5py biom-format
+	pip install pandas biopython scipy 'matplotlib>=2.2.3,<3.0' h5py biom-format
 	cd /opt
 	curl https://bitbucket.org/biobakery/metaphlan2/get/default.zip --output metaphlan2.zip
 	unzip metaphlan2.zip
